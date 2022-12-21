@@ -8,6 +8,7 @@ from nltk.stem import WordNetLemmatizer
 
 from tensorflow import keras
 from keras.models import load_model
+import sys
 
 
 lemmatizer = WordNetLemmatizer()
@@ -15,7 +16,7 @@ intents = json.loads(open('intents.json').read())
 
 words = pickle.load(open('words.pkl' , 'rb'))
 classes = pickle.load(open('classes.pkl' , 'rb'))
-model = load_model('chatbot_model.h5')
+model = load_model('chatbotmodel.h5')
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
@@ -58,5 +59,7 @@ print('Go! bot is running!')
 while True:
     message = input("")
     ints = predict_class(message)
+    if ints[0]['intent'] == 'goodbye':
+        sys.exit()
     res = get_response(ints , intents)
     print(res)

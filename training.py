@@ -57,7 +57,7 @@ for document in documents:
 
 
 random.shuffle(training)
-training = np.array(training)
+training = np.array(training, dtype=object)
 
 train_x = list(training[: , 0])
 train_y = list(training[: , 1])
@@ -73,5 +73,5 @@ sgd = SGD(learning_rate=0.01 , decay = 1e-6, momentum = 0.9 , nesterov = True)
 model.compile(loss = 'categorical_crossentropy' , optimizer = sgd , metrics = ['accuracy'])
 
 hist = model.fit(np.array(train_x) , np.array(train_y) , epochs = 200 , batch_size = 5 , verbose = 1)
-model.save('chatbot_model.h5' , hist)
+model.save('chatbotmodel.h5' , hist)
 print('done')
