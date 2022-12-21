@@ -1,6 +1,6 @@
 function chatBot() {
 
-  this.input;
+  // this.input;
 
   // this.respondTo = function (input) {
   //   this.input = input.toLowerCase();
@@ -19,6 +19,7 @@ function chatBot() {
   // this.match = function (regex) {
   //   return new RegExp(regex).test(this.input);
   // };
+
   this.respondTo = async function (input) {
     this.input = input.toLowerCase();
   
@@ -34,7 +35,11 @@ function chatBot() {
   
     // Return the response from the Flask route
     console.log(data.response)
-    return data.response;
+    reply = data.response
+    this.match = function(reply){
+      return reply
+    }
+
   };
 
 }
