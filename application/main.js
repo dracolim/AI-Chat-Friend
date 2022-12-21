@@ -1,34 +1,42 @@
 function chatBot() {
+
   this.input;
 
-  this.respondTo = function (input) {
+  // this.respondTo = function (input) {
+  //   this.input = input.toLowerCase();
+
+  //   if (this.match("(hi|hello)")) return "Hi dude";
+
+  //   if (this.match("(how are you)")) return "Okay, how are you?";
+
+  //   if (this.match("(how old are you)")) return "Infinity";
+
+  //   if (this.match("(what is your name)")) return "Robot";
+
+  //   return input + ", I don't understand what it is";
+  // };
+
+  // this.match = function (regex) {
+  //   return new RegExp(regex).test(this.input);
+  // };
+  this.respondTo = async function (input) {
     this.input = input.toLowerCase();
-
-    if (this.match("(hi|hello)")) return "Hi dude";
-
-    if (this.match("(how are you)")) return "Okay, how are you?";
-
-    if (this.match("(how old are you)")) return "Infinity";
-
-    if (this.match("(what is your name)")) return "Robot";
-
-    return input + ", I don't understand what it is";
-  };
-
-  this.match = function (regex) {
-    return new RegExp(regex).test(this.input);
-  };
-
-  const { spawn } = require("child_process");
-
-  function runPythonScript() {
-    const pythonProcess = spawn("python", ["/Applications/MAMP/htdocs/AI_Chat_Friend/chatbot.py"]);
-
-    pythonProcess.stdout.on("data", (data) => {
-      // Do something with the data returned from the Python script
-      console.log(data)
+  
+    // Send an HTTP request to the Flask route
+    const response = await fetch('http://localhost:5008/predict', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ message: input })
     });
-  }
+    const data = await response.json();
+  
+    // Return the response from the Flask route
+    console.log(data.response)
+    return data.response;
+  };
+
 }
 
 $(function () {

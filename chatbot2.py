@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-import random
+from flask_cors import CORS
 import random
 import json
 import pickle
@@ -12,12 +12,23 @@ from tensorflow import keras
 from keras.models import load_model
 import sys
 
+app = Flask(__name__)
+
+CORS(app)
+
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    # Get the message from the request and process it
+    message = request.json['message']
+    ints = predict_class(message)
+    res = get_response(ints, intents)
+    return jsonify({'response': res})
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
-
-words = pickle.load(open('words.pkl' , 'rb'))
-classes = pickle.load(open('classes.pkl' , 'rb'))
+words = pickle.load(open('words.pkl', 'rb'))
+classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbotmodel.h5')
 
 def clean_up_sentence(sentence):
@@ -56,12 +67,6 @@ def get_response(intents_list, intents_json):
             break
     return result
 
-print('Go! bot is running!')
 
-while True:
-    message = input("")
-    ints = predict_class(message)
-    if ints[0]['intent'] == 'goodbye':
-        sys.exit()
-    res = get_response(ints , intents)
-    print(res)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5008, debug=True)
