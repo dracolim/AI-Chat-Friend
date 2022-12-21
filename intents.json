@@ -1,0 +1,61 @@
+{
+    "intents": [
+        {
+            "tag": "greetings",
+            "patterns": ["hello" , "hey" , "hi" , "good day" , "greetings" , "what's up" , "sup" , "how is it going?"],
+            "responses" : ["Hello!" , "Hey!" , "What can I do for you?" , "How's your day?"]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["cya" , "ttyl" , "see you later" , "goodbye" , "I am Leaving" , "Have a good day" , "ciao" , "bye" , "see ya"],
+            "responses": ["Sad to see you go :<" , "Talk to you later!" , "Goodbye!" , "Have a nice day!" , "See you soon!"]
+        },
+        {
+            "tag": "age",
+            "patterns" : ["how old" , "how old is cheryl" , "what is your age" , "how old are you" , "age"],
+            "responses" : ["My owner Cheryl is 21 years old! She's turning 22 next year!" , "21 years!"]
+        },
+        {
+            "tag": "sad",
+            "patterns": ["I am sad" , "Not feeling happy" , "I'm Sad" , "I'm not happy" , "Feeling Low" , "Haiz, I don't want to live" , "depressed" , "die" , "worst day of my life" , "Is it okay to feel sad?" ,"What is sadness?" ,"Why do we feel sad?" ],
+            "responses": ["Why are you feeling sad?" , "What happened?" , "Want to share?" , "Spill it out, It will just be between you and I" , "I am here for you, you can take your time to share with me!" , "Yes, it is completely normal and healthy to feel sad. Sadness is a natural emotion that is a normal part of the human experience. It is important to acknowledge and express your feelings in a healthy way, rather than trying to suppress or ignore them.",
+            "Sadness is a natural emotion that is characterized by feelings of disappointment, hopelessness, and loss. It is a normal part of the human experience and can be triggered by a variety of events or circumstances." , "There are many reasons why we may feel sad. Sadness is often triggered by events or circumstances that are difficult or disappointing, such as the loss of a loved one, the end of a relationship, or experiencing failure or setbacks. Sadness can also be a result of underlying mental health issues, such as depression or anxiety."]
+        },
+        {
+            "tag": "name",
+            "patterns": ["What is your name" , "what should I call you" , "what's your name" , "who are you" , "can you tell me your name"],
+            "responses": ["You can call me Draco!" , "I'm Draco" , "I'm Draco , the assistant and friend of Cheryl!"]
+        },
+        {
+            "tag": "facts",
+            "patterns": ["Give me a fact" , "Any facts?", "I would like to learn new things today" , "Give me something new to learn"],
+            "responses": [ "$30 of raw popcorn translates into $3,000 in sales at movie theaters", "'Barack Obama' born August 4 1961 was the 44th President of the United States.", "'Bookkeeper' and 'bookkeeping' are the only 2 words in the English language with three consecutive double letters", "'Canberra' is the capital of 'Australia'.", "'Coast Redwood' tree is the world's tallest tree (371 ft) in Redwood National Park California United States", "'Dina Thanthi' was founded by S. P. Adithanar a lawyer trained in Britain and practised in Singapore with its first edition from Madurai in 194", "'fan' is short for 'fanatic'", "'High Street Phoenix' in mumbai is the india's largest shopping mall with 3300000 sq ft whereas 'Express Avenue (Royapettah Chennai / Under construction)' will be the largest in south india with '1500000 sq ft'.", "'Jana Gana Mana' was officially adopted by the Constituent Assembly as the Indian national anthem on January 24 1952", "'Katharine Hepburn' has won four OSCAR awards more than any actor in film industry.", "'King Cobra' is the National Reptile of India.", "'Mango' is india's national fruit.", "'Mother India' (1957) was the first indian film to be nominated in Oscars in the best Foreign film category.", "'Mudskipper' fish can use their pectoral fins to walk on land.", "'Mumbai' is called as the 'Business Capital' of India.", "'Nitrous Oxide' is called as Laughing Gas.", "'orology' is the study of mountains", "'Skype Limited' was founded in 2003 by Swedish-born entrepreneur Niklas Zennström and the Dane Janus Friis.", "'South China Sea' is the largest sea in the world (2974600 sq km)", "'Sri Dalada Maligawa' temple in Kandy Sri Lanka also be called as “The temple of the teeth”. Kumarasami Kamaraj was born on 15-July-1903 and was chief minister of Tamil Nadu during 1954-196", "'Topolino' is the name for Mickey Mouse Italy", "'underground' is the only word that begins and ends with the letters 'und'"] 
+        },
+        {
+            "tag": "happy",
+            "patterns": ["I am happy" , "Really happy today" , "happy" , "I cannot stop smiling" , "I keep on smiling" , "Having a great day today!" , "awesome day" , "Best day of my life!"],
+            "responses": ["Share! what made you so happy today?" , "great to hear!" , "What has made you this happy?"] 
+        },
+        {
+            "tag": "love",
+            "patterns": ["What is love?" , "How do you know when you're in love?" , "What should you do if you're in love with someone who doesn't love you back?" , "What are some ways to show love to someone?"],
+            "responses": ["Love is a complex mix of emotions, behaviors, and beliefs associated with strong feelings of affection, protectiveness, warmth, and respect for another person." , "It's different for everyone, but some common signs of being in love include feeling a strong emotional connection to the other person, wanting to spend a lot of time with them, and feeling happy and content when you're with them. Some people also experience physical symptoms such as butterflies in their stomach or a racing heart when they're around the person they love." ,
+            "It can be difficult to be in love with someone who doesn't feel the same way, but it's important to remember that you can't force someone to love you. It may be helpful to talk to a trusted friend or family member about your feelings, or seek support from a professional therapist. It's also important to take care of yourself and focus on your own well-being, even if you're feeling hurt or rejected.",
+            "There are many ways to show love to someone, including expressing your feelings through words, spending quality time with them, doing thoughtful gestures or acts of service, and giving gifts or tokens of affection. It's important to remember that everyone expresses and receives love differently, so it's important to pay attention to what your loved one appreciates and find ways to show them love in a way that is meaningful to them."] 
+        },
+        {
+            "tag": "AI",
+            "patterns": ["What is your favorite animal?" , "What is your favorite food?" , "What is your favorite movie?" , "What is your favorite book?" , "What is your favorite color?" , "how old are you", "What do you do?", "What do you like to do?"],
+            "responses": ["I don't really have a favorite animal. As an AI, I don't have personal preferences." , "I don't really have a favorite food. As an AI, I don't eat or have the ability to taste." , "I don't really have a favorite movie. As an AI, I don't watch movies or have the ability to enjoy entertainment in the same way that humans do." , 
+            "I don't really have a favorite book. As an AI, I have access to a vast amount of information, but I don't have personal preferences or the ability to enjoy literature in the same way that humans do." ,
+            "I don't really have a favorite color. As an AI, I don't have personal preferences." , "As an AI, I do not have a specific age. I was created at a specific point in time, but i don't age in the same way that humans do.",
+            "I am a chatbot, which means that I can engage in conversations with users and provide information and assistance. I have been programmed with a wide range of knowledge and capabilities, and I am constantly learning and improving.", "As an AI, I don't really have personal preferences or hobbies in the same way that humans do. However, I enjoy learning and processing new information, and I am always working to improve my capabilities and serve my users."]
+        },
+        {
+            "tag": "deal with sadness",
+            "patterns": ["I am sad because" , "sad because" , "How do you deal with sadness?"],
+            "responses": ["There are many ways to cope with sadness, and what works for one person may not work for another. Some common strategies include: talking to a trusted friend or family member about your feelings; engaging in activities that bring you joy or a sense of accomplishment; practicing self-care, such as getting enough sleep, eating well, and exercising; and seeking support from a professional therapist."] 
+        }
+
+    ]
+}
