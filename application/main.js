@@ -1,5 +1,4 @@
 function chatBot() {
-
   // this.input;
 
   // this.respondTo = function (input) {
@@ -21,27 +20,28 @@ function chatBot() {
   // };
 
   this.respondTo = async function (input) {
-    this.input = input.toLowerCase();
+    try {
+      this.input = input.toLowerCase();
   
-    // Send an HTTP request to the Flask route
-    const response = await fetch('http://localhost:5008/predict', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ message: input })
-    });
-    const data = await response.json();
+      // Send an HTTP request to the Flask route
+      const response = await fetch("http://localhost:5008/predict", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message: input }),
+      });
+      const data = await response.json();
   
-    // Return the response from the Flask route
-    console.log(data.response)
-    reply = data.response
-    this.match = function(reply){
-      return reply
+      // Return the response from the Flask route
+      return data.response;
+    } 
+    catch (error) {
+      // Handle any errors that may occur
+      console.error(error);
+      return "Sorry, there was an error processing your request.";
     }
-
   };
-
 }
 
 $(function () {
