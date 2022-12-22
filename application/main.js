@@ -64,6 +64,12 @@ $(function () {
     updateChat(you, input);
 
     var reply = bot.respondTo(input);
+
+    reply.then((result) => {
+      //console.log(result); 
+      reply = result
+    });
+
     if (reply == null) return;
 
     var latency = Math.floor(
@@ -110,5 +116,5 @@ $(function () {
   });
   $(".input a").bind("click", submitChat);
 
-  updateChat(robot, "Hello write me something");
+  updateChat(robot, "Hello!");
 });
