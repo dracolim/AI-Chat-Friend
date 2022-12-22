@@ -53,9 +53,48 @@
         },
         {
             "tag": "deal with sadness",
-            "patterns": ["I am sad because" , "sad because" , "How do you deal with sadness?"],
+            "patterns": ["I am sad because" , "sad because" , "How do you deal with sadness?" , "what should i do if i am sad"],
             "responses": ["There are many ways to cope with sadness, and what works for one person may not work for another. Some common strategies include: talking to a trusted friend or family member about your feelings; engaging in activities that bring you joy or a sense of accomplishment; practicing self-care, such as getting enough sleep, eating well, and exercising; and seeking support from a professional therapist."] 
+        },
+        {
+            "tag": "bored",
+            "patterns": ["I'm so bored, I don't know what to do with myself." , "I've been stuck inside all day and I'm going stir-crazy.",
+            "I can't believe how bored I am right now. This is driving me nuts.",
+            "I've tried everything to pass the time and I'm still bored.",
+            "I don't have anyone to hang out with and I'm so bored.",
+            "I'm so bored, I wish I had something fun to do.",
+            "I've been stuck in this same routine for weeks and I'm so bored.",
+            "I'm bored out of my mind. Is there anything interesting to do around here?",
+            "I'm so bored, I can't even find anything to watch on TV.",
+            "I'm so bored, I feel like I'm going to lose my mind.",
+            "I am bored", "I am bored, what should I do?"],
+            "responses": ["What type of activities do you want to do?", "what type of activities do you want to try?"]
+        },
+        {
+            "tag": "stuck inside activities",
+            "patterns": ["fun activies to do when stuck inside" , "activities to do when I am at home" , "home activities" , "stuck at home", "another activity for when stuck inside" , "another activity for when I am at home"],
+            "responses": ["play an instrument" , "write a short story" , "do a deep dive on a subject that interests you" , "fill out a crossword puzzle" , "try oragami",
+        "play board games like blockus" , "put together a puzzle" , "netflix and chill", "play video games"]
+        },
+        {
+            "tag": "indoor activites",
+            "patterns": ["activites to do when I am indoor", " creative activities when i am indoors" , "creative things to do indoor"],
+            "responses": ["start scrapbooking" , "make jewelry that matches your style" , "start a new book" , "learn to cook" , "listen to a new podcast" , "change up your decor",
+        "bake cookies" , "eat breakfast for dinner"]
+        },
+        {
+            "tag": "relaxing activities",
+            "patterns": ["relaxing stress relief activities" , "stress relief activies" , "relaxing activities" , "chill acitivities to relax and relieve stress"],
+            "responses": ["make a gratitude list" , "write out your goals" , "unplug your device" , "do a random act of kindness" , "Give knitting a try" ,"paint your nails" , 
+            "take a bubble bath" , "put on a face mask" , "start journaling" , "try yoga or meditation"]
+        },
+        {
+            "tag": "outdoor activities",
+            "patterns": ["outdoor activities" , "I want to try some outdoor activities" , "outside of home" ,"outdoor" , "another outdoor activity" ],
+            "responses": ["go climbing" , "go hiking" , "head outside and take a walk" , "get lost in your hometown" , "go for a jog" , "dine al fresco" , 
+        "hit the beach" , "go shopping" , "go for a bike ride"]
         }
+
 
     ]
 }
