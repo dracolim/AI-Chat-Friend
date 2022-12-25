@@ -17,9 +17,15 @@
         },
         {
             "tag": "sad",
-            "patterns": ["I am sad" , "Not feeling happy" , "I'm Sad" , "I'm not happy" , "Feeling Low" , "Haiz, I don't want to live" , "depressed" , "die" , "worst day of my life" , "Is it okay to feel sad?" ,"What is sadness?" ,"Why do we feel sad?" ],
-            "responses": ["Why are you feeling sad?" , "What happened?" , "Want to share?" , "Spill it out, It will just be between you and I" , "I am here for you, you can take your time to share with me!" , "Yes, it is completely normal and healthy to feel sad. Sadness is a natural emotion that is a normal part of the human experience. It is important to acknowledge and express your feelings in a healthy way, rather than trying to suppress or ignore them.",
+            "patterns": ["I am feeling really sad today", "I don't know how to deal with this sadness", "I don't know how to make it stop", "I feel like I am in a never-ending rut of sadness", "I just can't seem to shake this sadness","I am sad" , "Not feeling happy" , "I'm Sad" , "I'm not happy" , "Feeling Low" , "Haiz, I don't want to live" , "depressed" , "die" , "worst day of my life" , "Is it okay to feel sad?" ,"What is sadness?" ,"Why do we feel sad?" ],
+            "responses": ["It is important to remember that sadness is a natural and normal part of life, and it is okay to feel it. It is also important to remember that it is possible to find ways to cope with and manage sadness, and that it is possible to find happiness and joy again in the future.", "Why are you feeling sad?" , "What happened?" , "Want to share?" , "Spill it out, It will just be between you and I" , "I am here for you, you can take your time to share with me!" , "Yes, it is completely normal and healthy to feel sad. Sadness is a natural emotion that is a normal part of the human experience. It is important to acknowledge and express your feelings in a healthy way, rather than trying to suppress or ignore them.",
             "Sadness is a natural emotion that is characterized by feelings of disappointment, hopelessness, and loss. It is a normal part of the human experience and can be triggered by a variety of events or circumstances." , "There are many reasons why we may feel sad. Sadness is often triggered by events or circumstances that are difficult or disappointing, such as the loss of a loved one, the end of a relationship, or experiencing failure or setbacks. Sadness can also be a result of underlying mental health issues, such as depression or anxiety."]
+        },
+        {
+            "tag": "alone",
+            "patterns": ["I feel so alone", "I don't have anyone to talk to about how I feel", "I feel like no one understands me", "I feel like I am all alone in this"],
+            "responses": ["It can be difficult to feel alone, especially when we are experiencing difficult emotions like sadness. It is important to remember that you are not alone, and that there are people who care about you and are willing to listen and support you. It can be helpful to reach out to a trusted friend or family member, or to seek support from a mental health professional. It is also important to remember that it is okay to take time for yourself and to focus on self-care when you are feeling down.",
+            "It is normal to feel alone at times, but it is important to remember that there are people who care about you and are willing to listen and support you. It can be helpful to reach out to a trusted friend or family member, or to seek support from a mental health professional. Remember that it is okay to take time for yourself and to focus on self-care when you are feeling down."]
         },
         {
             "tag": "name",
@@ -32,9 +38,9 @@
             "responses": [ "$30 of raw popcorn translates into $3,000 in sales at movie theaters", "'Barack Obama' born August 4 1961 was the 44th President of the United States.", "'Bookkeeper' and 'bookkeeping' are the only 2 words in the English language with three consecutive double letters", "'Canberra' is the capital of 'Australia'.", "'Coast Redwood' tree is the world's tallest tree (371 ft) in Redwood National Park California United States", "'Dina Thanthi' was founded by S. P. Adithanar a lawyer trained in Britain and practised in Singapore with its first edition from Madurai in 194", "'fan' is short for 'fanatic'", "'High Street Phoenix' in mumbai is the india's largest shopping mall with 3300000 sq ft whereas 'Express Avenue (Royapettah Chennai / Under construction)' will be the largest in south india with '1500000 sq ft'.", "'Jana Gana Mana' was officially adopted by the Constituent Assembly as the Indian national anthem on January 24 1952", "'Katharine Hepburn' has won four OSCAR awards more than any actor in film industry.", "'King Cobra' is the National Reptile of India.", "'Mango' is india's national fruit.", "'Mother India' (1957) was the first indian film to be nominated in Oscars in the best Foreign film category.", "'Mudskipper' fish can use their pectoral fins to walk on land.", "'Mumbai' is called as the 'Business Capital' of India.", "'Nitrous Oxide' is called as Laughing Gas.", "'orology' is the study of mountains", "'Skype Limited' was founded in 2003 by Swedish-born entrepreneur Niklas Zennström and the Dane Janus Friis.", "'South China Sea' is the largest sea in the world (2974600 sq km)", "'Sri Dalada Maligawa' temple in Kandy Sri Lanka also be called as “The temple of the teeth”. Kumarasami Kamaraj was born on 15-July-1903 and was chief minister of Tamil Nadu during 1954-196", "'Topolino' is the name for Mickey Mouse Italy", "'underground' is the only word that begins and ends with the letters 'und'"] 
         },
         {
-            "tag": "happy",
-            "patterns": ["I am happy" , "Really happy today" , "happy" , "I cannot stop smiling" , "I keep on smiling" , "Having a great day today!" , "awesome day" , "Best day of my life!"],
-            "responses": ["Share! what made you so happy today?" , "great to hear!" , "What has made you this happy?"] 
+          "tag": "happy",
+          "patterns": ["I'm happy", "I'm feeling good", "I'm excited", "I'm joyful", "I'm thrilled", "I'm glad"],
+          "responses": ["That's great to hear! What's making you happy?", "I'm glad to see you're feeling good. What's been bringing you joy?", "It's always nice to hear when someone is feeling happy. What's been bringing you joy lately?"]
         },
         {
             "tag": "love",
@@ -93,8 +99,41 @@
             "patterns": ["outdoor activities" , "I want to try some outdoor activities" , "outside of home" ,"outdoor" , "another outdoor activity" ],
             "responses": ["go climbing" , "go hiking" , "head outside and take a walk" , "get lost in your hometown" , "go for a jog" , "dine al fresco" , 
         "hit the beach" , "go shopping" , "go for a bike ride"]
+        },
+        {
+            "tag": "hobbies",
+            "patterns": ["what do you like to do in your free time?", "what are your hobbies?", "what do you like to do for fun?", "what are your interests?", "what do you enjoy doing?"],
+            "responses": ["I enjoy reading, writing, and playing music in my free time.", "I like to spend my time outdoors, going for hikes and exploring new places.", "I'm a big fan of sports and love to play and watch different games.", "I enjoy learning about new things and trying out new hobbies, like painting or cooking."]
+            },
+        {
+            "tag": "movies",
+            "patterns": ["what are your favorite movies?", "what kind of movies do you like?", "what's your favorite movie genre?", "what's your go-to movie when you're feeling down?", "what's the best movie you've seen recently?"],
+            "responses": ["I love action movies, especially ones with a lot of suspense and plot twists.", "I'm a big fan of romantic comedies and enjoy a good chick flick every now and then.", "I enjoy horror movies and find them really thrilling.", "When I'm feeling down, I like to watch feel-good movies that lift my spirits and make me laugh.", "Recently, I saw a great documentary about environmentalism that really moved me. It was called 'Before the Flood' and I highly recommend it."]
+        },
+        {
+            "tag": "favorite food",
+            "patterns": ["what is your favorite food?", "do you like pizza?", "what do you like to eat?", "what's your go-to meal?", "do you have a favorite restaurant?"],
+            "responses": ["My favorite food is sushi! I love the variety of flavors and textures in each bite.", "I enjoy pizza, especially with lots of veggies and a nice crispy crust.", "I am a fan of all kinds of food, but I especially love trying new and exciting dishes from different cultures.", "My go-to meal is usually a bowl of pasta with some grilled vegetables on the side.", "I don't have a specific favorite restaurant, but I do love trying out new places and trying new dishes."]
+        },
+        {
+            "tag": "anger",
+            "patterns": ["I'm angry", "I'm so angry", "I am so mad", "I'm furious", "I am so annoyed", "I'm so frustrated", "I am so irritable"],
+            "responses": ["Why are you feeling angry?", "What's causing your anger?", "It's okay to feel angry, but it's important to find healthy ways to express and manage your emotions. Do you want to talk about what's causing your anger?", "Sometimes it can be helpful to take a few deep breaths and try to calm down before reacting to situations that make us angry. Is there anything I can do to help you feel better?"]
+        },
+        {
+            "tag": "fear",
+            "patterns": ["I'm scared", "I'm so scared", "I am so worried", "I'm terrified", "I am so anxious", "I'm so panicked"],
+            "responses": ["What are you afraid of?", "It's completely normal to feel fear in certain situations. Can you tell me more about what's causing your fear?", "Sometimes it can be helpful to try to identify and acknowledge our fears, and then develop strategies to cope with them. Do you want to talk about your fear and come up with some coping strategies together?", "It's okay to feel afraid, but it's important to try to find healthy ways to manage your fear. Is there anything I can do to help you feel better?"]
+        },
+        {
+            "tag": "joy",
+            "patterns": ["I'm happy", "I'm so happy", "I am so excited", "I'm thrilled", "I am so joyful", "I'm so content"],
+            "responses": ["That's great to hear! What's making you happy?", "It's wonderful to feel joy and happiness. What has been bringing you joy lately?", "It's important to make time for activities and experiences that bring us joy and happiness. Is there anything fun or enjoyable that you have planned for the near future?", "I'm glad to see that you're feeling happy. Is there anything I can do to help you continue to feel joy and happiness?"]
+        },
+        {
+            "tag": "disgust",
+            "patterns": ["I'm disgusted", "I'm so disgusted", "I am so revolted", "I'm sickened", "I am so repulsed"],
+            "responses": ["What is causing your disgust?", "Disgust is a natural emotion that can be triggered by things that we find unpleasant or distasteful. Can you tell me more about what's causing your disgust?", "It's important to try to find healthy ways to express and manage our emotions, including disgust. Do you want to talk about what's causing your disgust and come up with some coping strategies?", "I understand that you're feeling disgusted. Is there anything I can do to help you feel better?"]
         }
-
-
     ]
 }
