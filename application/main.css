@@ -20,9 +20,10 @@
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Electrolize', sans-serif;
   font-size: 13px;
-  background-color: #222226 !important;
+  background-color: #000000 !important;
+  /* #222226 */
 }
 
 .container {
@@ -34,9 +35,9 @@ body {
 .title {
   font-size: 30px;
   font-weight: bold;
-  font-family: "Courier New", Monospace;
+  font-family: 'Electrolize', sans-serif;
   padding-bottom: 5px;
-  color: #fff;
+  color: #06a719;
   text-align: center;
 }
 
@@ -44,7 +45,7 @@ body {
   height: 90%;
   overflow-y: scroll;
   background-color: #333336 !important;
-  border-radius: 10px 0 0 0;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .chat div {
@@ -108,5 +109,5 @@ body {
   color: #000;
 }
 .text {
-  color: #fff;
+  color: #06a719;
 }
