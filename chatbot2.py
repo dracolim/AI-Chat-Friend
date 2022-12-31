@@ -74,7 +74,7 @@ def get_response(intents_list, intents_json):
 
 def get_weather(lat, lon):
     # Replace YOUR_API_KEY with your actual API key
-    api_key = "1560e1d13aee922f4fea8714c57ce559"
+    api_key = "API KEY"
     # Send a request to the OpenWeatherMap API to get the current weather for the city
     response = requests.get(f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=current&appid={api_key}")
     # Check the status code of the response to ensure that the request was successful
@@ -92,7 +92,7 @@ def get_weather(lat, lon):
 
 def get_location():
     # Replace YOUR_API_KEY with your actual API key
-    api_key = "AIzaSyCEd94_pjMfFU3y5GxPzY-vJeFJeacdI-c"
+    
 
     # Set the request parameters
     params = {
