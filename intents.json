@@ -38,9 +38,9 @@
             "responses": [ "$30 of raw popcorn translates into $3,000 in sales at movie theaters", "'Barack Obama' born August 4 1961 was the 44th President of the United States.", "'Bookkeeper' and 'bookkeeping' are the only 2 words in the English language with three consecutive double letters", "'Canberra' is the capital of 'Australia'.", "'Coast Redwood' tree is the world's tallest tree (371 ft) in Redwood National Park California United States", "'Dina Thanthi' was founded by S. P. Adithanar a lawyer trained in Britain and practised in Singapore with its first edition from Madurai in 194", "'fan' is short for 'fanatic'", "'High Street Phoenix' in mumbai is the india's largest shopping mall with 3300000 sq ft whereas 'Express Avenue (Royapettah Chennai / Under construction)' will be the largest in south india with '1500000 sq ft'.", "'Jana Gana Mana' was officially adopted by the Constituent Assembly as the Indian national anthem on January 24 1952", "'Katharine Hepburn' has won four OSCAR awards more than any actor in film industry.", "'King Cobra' is the National Reptile of India.", "'Mango' is india's national fruit.", "'Mother India' (1957) was the first indian film to be nominated in Oscars in the best Foreign film category.", "'Mudskipper' fish can use their pectoral fins to walk on land.", "'Mumbai' is called as the 'Business Capital' of India.", "'Nitrous Oxide' is called as Laughing Gas.", "'orology' is the study of mountains", "'Skype Limited' was founded in 2003 by Swedish-born entrepreneur Niklas Zennström and the Dane Janus Friis.", "'South China Sea' is the largest sea in the world (2974600 sq km)", "'Sri Dalada Maligawa' temple in Kandy Sri Lanka also be called as “The temple of the teeth”. Kumarasami Kamaraj was born on 15-July-1903 and was chief minister of Tamil Nadu during 1954-196", "'Topolino' is the name for Mickey Mouse Italy", "'underground' is the only word that begins and ends with the letters 'und'"] 
         },
         {
-          "tag": "happy",
-          "patterns": ["I'm happy", "I'm feeling good", "I'm excited", "I'm joyful", "I'm thrilled", "I'm glad"],
-          "responses": ["That's great to hear! What's making you happy?", "I'm glad to see you're feeling good. What's been bringing you joy?", "It's always nice to hear when someone is feeling happy. What's been bringing you joy lately?"]
+            "tag": "happy",
+            "patterns": ["I'm happy", "I'm feeling good", "I'm excited", "I'm joyful", "I'm thrilled", "I'm glad"],
+            "responses": ["That's great to hear! What's making you happy?", "I'm glad to see you're feeling good. What's been bringing you joy?", "It's always nice to hear when someone is feeling happy. What's been bringing you joy lately?"]
         },
         {
             "tag": "love",
@@ -134,6 +134,12 @@
             "tag": "disgust",
             "patterns": ["I'm disgusted", "I'm so disgusted", "I am so revolted", "I'm sickened", "I am so repulsed"],
             "responses": ["What is causing your disgust?", "Disgust is a natural emotion that can be triggered by things that we find unpleasant or distasteful. Can you tell me more about what's causing your disgust?", "It's important to try to find healthy ways to express and manage our emotions, including disgust. Do you want to talk about what's causing your disgust and come up with some coping strategies?", "I understand that you're feeling disgusted. Is there anything I can do to help you feel better?"]
+        },
+        {
+            "tag": "weather",
+            "patterns": ["What is the weather like today?" , "What is the weather?", "What is the possibility of raining?" , "Is it sunny today?" , 
+        "What is today's temperature?" , "What is today's weather?"],
+            "responses": ["What is your location?"]
         }
     ]
 }
