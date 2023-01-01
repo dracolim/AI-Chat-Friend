@@ -72,8 +72,12 @@ def get_response(message, intents_list, intents_json, lat , lon):
             if message[i].isdigit():
                 radius += message[i]
                 last_index = i
-        if message[last_index+1] == 'k':
-            radius = int(radius) * 1000
+        if radius != '':
+            radius = int(radius)
+            if message[last_index+1] == 'k':
+                radius = radius * 1000
+        else: 
+            radius = 1000
         result = get_nearby_restaurants(lat, lon,radius)
     else: 
         list_of_intents = intents_json['intents']
@@ -127,8 +131,32 @@ def get_nearby_restaurants(lat, lon, radius):
         data = response.json()
         # Get the list of restaurants from the data
         restaurants = data["results"]
-        # Return the list of restaurants
-        return restaurants
+        restaurant_list = []
+        for i in range(5):
+            chosen = random.choice(restaurants)
+            restaurants.remove(chosen)
+
+            name = chosen['name']
+            location = chosen["vicinity"]
+            if "opening_hours" in chosen:
+                opening_hours = chosen["opening_hours"]
+                if(opening_hours == 'true'):
+                    opening_hours = "Currently it is open."
+                else:
+                    opening_hours = "Currently it is closed."
+            else:
+                opening_hours = "Not available"
+            if "rating" in chosen:
+                rating = chosen["rating"]
+            else:
+                rating = "Not available"
+
+            restaurant = f"Name: {name} \n <p> Location: {location} \n <p> {opening_hours} \n <p> Rating: {rating}"
+            print(f"Name: {name} \n Location: {location} \n {opening_hours} \n Rating: {rating}")
+            
+            restaurant_list.append(restaurant)
+            # print(restaurant_list)
+        return restaurant_list
     else:
         # If the request was not successful, return an empty list
         return []

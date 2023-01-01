@@ -12,7 +12,6 @@ function ipLookUp() {
   });
 }
 
-
 function chatBot() {
   this.respondTo = async function (input) {
     try {
@@ -46,7 +45,6 @@ function chatBot() {
   };
 }
 
-
 $(function () {
     var you = "You";
     var robot = "Chatbot";
@@ -69,7 +67,6 @@ $(function () {
       var reply = bot.respondTo(input);
 
       reply.then((result) => {
-        //console.log(result); 
         reply = result
       });
 
