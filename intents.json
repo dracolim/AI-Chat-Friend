@@ -139,7 +139,7 @@
             "tag": "weather",
             "patterns": ["What is the weather like today?" , "What is the weather?", "What is the possibility of raining?" , "Is it sunny today?" , 
         "What is today's temperature?" , "What is today's weather?"],
-            "responses": ["What is your location?"]
+            "responses": [""]
         }
     ]
 }

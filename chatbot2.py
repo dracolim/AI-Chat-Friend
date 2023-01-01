@@ -23,9 +23,11 @@ CORS(app)
 def predict():
     # Get the message from the request and process it
     message = request.json['message']
+    lat = request.json['lat']
+    lon = request.json['lon']
     ints = predict_class(message)
-    res = get_response(ints, intents)
-    return jsonify({'response': res})
+    res = get_response(ints, intents,lat, lon)
+    return jsonify({'response': res, 'lat': lat, 'lon': lon})
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
@@ -60,72 +62,45 @@ def predict_class(sentence):
 
     return return_list
 
-def get_response(intents_list, intents_json):
+def get_response(intents_list, intents_json, lat , lon):
     tag = intents_list[0]['intent']
     if tag == "weather":
-        get_location()
+        result = get_weather(lat, lon)
     else: 
         list_of_intents = intents_json['intents']
         for i in list_of_intents:
             if i['tag'] == tag:
                 result = random.choice(i['responses'])
                 break
-        return result
+    return result
 
 def get_weather(lat, lon):
     # Replace YOUR_API_KEY with your actual API key
-    with open('api_keys.txt', 'r') as f:
+    with open('api_key.txt', 'r') as f:
         api_keys = []
         for line in f:
-            key, value = line.strip().split('=')
-            api_keys.append(value)
+            list = line.strip().split('=')
+            if(len(list) == 2):
+                value = list[1]
+                api_keys.append(value)
+            else:
+                break
     api_key = api_keys[0]
     # Send a request to the OpenWeatherMap API to get the current weather for the city
-    response = requests.get(f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=current&appid={api_key}")
+    response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}")
     # Check the status code of the response to ensure that the request was successful
     if response.status_code == 200:
         # If the request was successful, parse the JSON data from the response
         data = response.json()
         # Get the temperature and weather description from the data
-        temperature = data["main"]["temp"]
+        temperature = round(int(data["main"]["temp"]) - 273.15 , 2)
         description = data["weather"][0]["description"]
+        humidity = data["main"]["humidity"]
         # Return the temperature and description as a string
-        return f"The current temperature is {temperature}°C and the sky is {description}"
+        return f"The current temperature is {str(temperature)}°C and the sky is {description} with humidity of {humidity}"
     else:
         # If the request was not successful, return an error message
         return "Sorry, there was an error getting the weather data."
-
-def get_location():
-    # Replace YOUR_API_KEY with your actual API key
-    with open('api_keys.txt', 'r') as f:
-        api_keys = []
-        for line in f:
-            key, value = line.strip().split('=')
-            api_keys.append(value)
-    api_key = api_keys[1]
-    # Set the request parameters
-    params = {
-        "key": api_key,
-        "considerIp": "true"  # Use the IP address of the client as the location to look up
-    }
-
-    # Make the request to the API
-    response = requests.get("https://www.googleapis.com/geolocation/v1/geolocate", params=params)
-
-    # Check the status code of the response to ensure that the request was successful
-    if response.status_code == 200:
-        # If the request was successful, parse the JSON data from the response
-        data = response.json()
-        # Get the latitude and longitude from the data
-        latitude = data["location"]["lat"]
-        longitude = data["location"]["lng"]
-        # Print the latitude and longitude
-        print(f"Latitude: {latitude}")
-        print(f"Longitude: {longitude}")
-    else:
-        # If the request was not successful, print an error message
-        print("Sorry, there was an error getting the location data.")
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5008, debug=True)
