@@ -140,6 +140,11 @@
             "patterns": ["What is the weather like today?" , "What is the weather?", "What is the possibility of raining?" , "Is it sunny today?" , 
         "What is today's temperature?" , "What is today's weather?"],
             "responses": [""]
+        },
+        {
+            "tag": "nearby restaurants",
+            "patterns": ["what are some nearby restaurants?" , "can you list me some nearby restaurants to try?" , "Is there any nearby restaurants?" ],
+            "responses": [""]
         }
     ]
 }
