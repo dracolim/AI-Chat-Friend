@@ -138,6 +138,7 @@ def get_nearby_restaurants(lat, lon, radius):
 
             name = chosen['name']
             location = chosen["vicinity"]
+            # link = link = chosen["photos"][0]["html_attributions"][0]
             if "opening_hours" in chosen:
                 opening_hours = chosen["opening_hours"]
                 if(opening_hours == 'true'):
@@ -151,11 +152,8 @@ def get_nearby_restaurants(lat, lon, radius):
             else:
                 rating = "Not available"
 
-            restaurant = f"Name: {name} \n <p> Location: {location} \n <p> {opening_hours} \n <p> Rating: {rating}"
-            print(f"Name: {name} \n Location: {location} \n {opening_hours} \n Rating: {rating}")
-            
+            restaurant = f"<br>Name: {name} <br>Location: {location} <br>Opening Hours: {opening_hours} <br>Rating: {rating} <br>"
             restaurant_list.append(restaurant)
-            # print(restaurant_list)
         return restaurant_list
     else:
         # If the request was not successful, return an empty list

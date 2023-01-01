@@ -99,10 +99,10 @@ $(function () {
         '<div><span class="party"></span> <span class="text"></span></div>'
       );
       line
-        .find(".party")
-        .addClass(style)
-        .text(party + ":");
-      line.find(".text").text(text);
+      .find(".party")
+      .addClass(style)
+      .text(party + ":");
+      line.find(".text").html(text.replace(/\n/g, "<br>"));
 
       chat.append(line);
 
