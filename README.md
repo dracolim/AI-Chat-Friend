@@ -7,7 +7,7 @@
 I got inspired by a Korean show called "Somebody" to create a personal AI chat friend to talk to and communicate with. The AI can tell you the weather and location and even give advice relating to your emotions. This AI chatbot is created using deep learning with TensorFlow and Keras (library for neural networks) with python. 
 
 ### What can this AI Chat Friend do?
-<i>hello<i>
+<b>hello<b>
 
 
 
