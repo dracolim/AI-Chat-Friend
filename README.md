@@ -11,17 +11,17 @@ I got inspired by a Korean show called "Somebody" to create a personal AI chat f
 ### What can this AI Chat Friend do?
 <b>Some examples include:<b>
 <br>
-<u>Provide weather information<u>
+<ins>Provide weather information</ins>
 <br>
 <img width="355" alt="Screenshot 2023-01-06 at 9 44 45 PM" src="https://user-images.githubusercontent.com/85498185/211026545-c77a4d7e-f67f-4a12-8022-ab5700135dce.png">
 <br>
-<u>Recommend restaurants within desired distance<u><br>
+<ins>Recommend restaurants within desired distance<u><ins>
 <img width="355" alt="Screenshot 2023-01-06 at 9 44 59 PM" src="https://user-images.githubusercontent.com/85498185/211026567-81bac31a-f7b5-40bf-85dc-d7fabfc93e5a.png">
 <br>
-<u>Recommend you activites to do when bored<u><br>
+<ins>Recommend you activites to do when bored<u><ins>
 <img width="355" alt="Screenshot 2023-01-06 at 9 45 12 PM" src="https://user-images.githubusercontent.com/85498185/211026572-e3bae3c3-e1b6-426a-bb61-e15ba4f65f6e.png">
 <br>
-<u>Provide emotional advice<u><br>
+<ins>Provide emotional advice<u><ins>
 
 ### APIs used:
 1. Google Geolocation API
