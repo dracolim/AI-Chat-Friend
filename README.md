@@ -8,6 +8,13 @@
 ## Introduction 
 I got inspired by a Korean show called "Somebody" to create a personal AI chat friend to talk to and communicate with. The AI can tell you the weather and location and even give advice relating to your emotions. This AI chatbot is created using deep learning with TensorFlow and Keras (library for neural networks) with python. 
 
+## How to start using?
+1. Turn on your mamp / wamp
+2. In your terminal , type "python3 chatbot2.py" 
+3. Once the application is running, go to "index.html" , the application will be shown on the screen
+4. Enter any prompts , the ai chat friend will respond in return
+
+
 ## What can this AI Chat Friend do? 
 <b>SOME EXAMPLES include:<b>
 <br>
